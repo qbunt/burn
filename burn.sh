@@ -20,12 +20,13 @@ do
 done
 echo $?
 
-# nuke sensitive userspace folders
-rm -rf $HOME/Dropbox
-rm -rf $HOME/.dropbox*
-rm -rf $HOME/Google\ Drive
-rm -rf $HOME/VirtualBox\ VMs
-rm -rf $HOME/go
+# secure nuke sensitive userspace folders
+srm -rv $HOME/Dropbox
+srm -rv $HOME/.dropbox*
+srm -rv $HOME/downloads
+srm -rv $HOME/Google\ Drive
+srm -rv $HOME/VirtualBox\ VMs
+srm -rv $HOME/go
 echo "all user data removed..."
 
 # nuke icloud login
